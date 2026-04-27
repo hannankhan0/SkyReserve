@@ -1,0 +1,309 @@
+{
+  "info": {
+    "name": "SkyReserve Backend",
+    "_postman_id": "skyreserve-collection-001",
+    "description": "Postman collection for SkyReserve Airline Reservation System backend APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1) Root Test",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5001/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5001",
+          "path": [""]
+        },
+        "description": "Check karna ke backend chal raha hai ya nahi."
+      },
+      "response": []
+    },
+    {
+      "name": "2) Create Booking",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"user_id\": 1,\n  \"schedule_id\": 1,\n  \"special_requests\": \"Window seat please\",\n  \"passengers\": [\n    {\n      \"passenger_name\": \"John Smith\",\n      \"seat_id\": 3\n    }\n  ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5001/api/bookings",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5001",
+          "path": ["api", "bookings"]
+        },
+        "description": "Nayi booking create karni."
+      },
+      "response": []
+    },
+    {
+      "name": "3) My Bookings",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-user-id",
+            "value": "1"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5001/api/bookings/my-bookings",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5001",
+          "path": ["api", "bookings", "my-bookings"]
+        },
+        "description": "User ki sari bookings dekhna."
+      },
+      "response": []
+    },
+    {
+      "name": "4) Get Booking By ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5001/api/bookings/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5001",
+          "path": ["api", "bookings", "1"]
+        },
+        "description": "Ek specific booking dekhna."
+      },
+      "response": []
+    },
+    {
+      "name": "5) Confirm Booking",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5001/api/bookings/1/confirm",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5001",
+          "path": ["api", "bookings", "1", "confirm"]
+        },
+        "description": "Booking ko confirmed karna."
+      },
+      "response": []
+    },
+    {
+      "name": "6) Cancel Booking",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5001/api/bookings/1/cancel",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5001",
+          "path": ["api", "bookings", "1", "cancel"]
+        },
+        "description": "Booking cancel karni, tickets cancel, payment refund, seats release."
+      },
+      "response": []
+    },
+    {
+      "name": "7) Get All Bookings",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5001/api/bookings",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5001",
+          "path": ["api", "bookings"]
+        },
+        "description": "Sab bookings dekhna."
+      },
+      "response": []
+    },
+    {
+      "name": "8) Booking Stats",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5001/api/bookings/stats",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5001",
+          "path": ["api", "bookings", "stats"]
+        },
+        "description": "Booking statistics dekhna."
+      },
+      "response": []
+    },
+    {
+      "name": "9) Create Payment",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"booking_id\": 1,\n  \"payment_method\": \"credit_card\",\n  \"payment_amount\": 280\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5001/api/payments",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5001",
+          "path": ["api", "payments"]
+        },
+        "description": "Booking ke against payment create karna."
+      },
+      "response": []
+    },
+    {
+      "name": "10) My Payments",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-user-id",
+            "value": "1"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5001/api/payments/my-payments",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5001",
+          "path": ["api", "payments", "my-payments"]
+        },
+        "description": "User ki payments dekhna."
+      },
+      "response": []
+    },
+    {
+      "name": "11) Get Payment By ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5001/api/payments/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5001",
+          "path": ["api", "payments", "1"]
+        },
+        "description": "Ek payment ka detail dekhna."
+      },
+      "response": []
+    },
+    {
+      "name": "12) Refund Payment",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5001/api/payments/1/refund",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5001",
+          "path": ["api", "payments", "1", "refund"]
+        },
+        "description": "Payment refund karna."
+      },
+      "response": []
+    },
+    {
+      "name": "13) My Tickets",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-user-id",
+            "value": "1"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5001/api/tickets/my-tickets",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5001",
+          "path": ["api", "tickets", "my-tickets"]
+        },
+        "description": "User ke tickets dekhna."
+      },
+      "response": []
+    },
+    {
+      "name": "14) Get Ticket By ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5001/api/tickets/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5001",
+          "path": ["api", "tickets", "1"]
+        },
+        "description": "Ek ticket ka detail dekhna."
+      },
+      "response": []
+    },
+    {
+      "name": "15) Check In Ticket",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5001/api/tickets/1/check-in",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5001",
+          "path": ["api", "tickets", "1", "check-in"]
+        },
+        "description": "Ticket ko checked-in mark karna."
+      },
+      "response": []
+    },
+    {
+      "name": "16) Download Ticket PDF",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5001/api/tickets/1/download",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5001",
+          "path": ["api", "tickets", "1", "download"]
+        },
+        "description": "Ticket PDF download karna."
+      },
+      "response": []
+    }
+  ]
+}

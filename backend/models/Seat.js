@@ -1,10 +1,10 @@
 const { getConnection, sql } = require('../config/db');
-
+const ensureSeatHoldColumns = require('../utils/ensureSeatHoldColumns');
 
 class Seat {
-
     static async findBySchedule(scheduleId) {
         const pool = await getConnection();
+        await ensureSeatHoldColumns(pool);
         const result = await pool.request()
             .input('schedule_id', sql.Int, scheduleId)
             .query(`
@@ -14,6 +14,11 @@ class Seat {
                     s.seat_number,
                     s.seat_class,
                     s.is_available,
+                    CASE
+                        WHEN s.is_available = 0 AND s.held_until IS NOT NULL THEN 'held'
+                        WHEN s.is_available = 0 THEN 'booked'
+                        ELSE 'available'
+                    END AS seat_status,
                     s.price_multiplier,
                     s.held_until,
                     s.hold_user_id,
@@ -30,7 +35,9 @@ class Seat {
 
     static async getSeatMap(scheduleId) {
         const pool = await getConnection();
+        await ensureSeatHoldColumns(pool);
 
+        // Expired temporary holds become available again.
         await pool.request()
             .input('schedule_id', sql.Int, scheduleId)
             .query(`
@@ -47,6 +54,7 @@ class Seat {
             .query(`
                 SELECT
                     s.seat_id,
+                    s.schedule_id,
                     s.seat_number,
                     s.seat_class,
                     s.is_available,
@@ -56,6 +64,9 @@ class Seat {
                         ELSE 'available'
                     END AS seat_status,
                     s.price_multiplier,
+                    s.held_until,
+                    s.hold_user_id,
+                    f.base_price,
                     CAST(f.base_price * s.price_multiplier AS DECIMAL(10,2)) AS seat_price
                 FROM Seats s
                 JOIN Flight_Schedules fs ON s.schedule_id = fs.schedule_id
@@ -66,12 +77,17 @@ class Seat {
         return result.recordset;
     }
 
-
     static async reserve(seatIds, userId) {
         const pool = await getConnection();
+        await ensureSeatHoldColumns(pool);
+
+        const ids = seatIds.map(Number).filter(Number.isFinite);
+        if (ids.length !== seatIds.length) {
+            throw new Error('Invalid seat id received');
+        }
 
         const request = pool.request();
-        const placeholders = seatIds.map((id, index) => {
+        const placeholders = ids.map((id, index) => {
             request.input(`id${index}`, sql.Int, id);
             return `@id${index}`;
         }).join(', ');
@@ -81,9 +97,9 @@ class Seat {
             WHERE seat_id IN (${placeholders}) AND is_available = 1
         `);
 
-        if (checkResult.recordset.length !== seatIds.length) {
-            const availableIds = checkResult.recordset.map(r => r.seat_id);
-            const unavailable = seatIds.filter(id => !availableIds.includes(id));
+        if (checkResult.recordset.length !== ids.length) {
+            const availableIds = checkResult.recordset.map(r => Number(r.seat_id));
+            const unavailable = ids.filter(id => !availableIds.includes(id));
             throw new Error(`Seats not available: ${unavailable.join(', ')}`);
         }
 
@@ -91,13 +107,13 @@ class Seat {
 
         const updateRequest = pool.request();
         updateRequest.input('held_until', sql.DateTime2, holdUntil);
-        updateRequest.input('hold_user_id', sql.Int, userId || null);
+        updateRequest.input('hold_user_id', sql.Int, userId ? Number(userId) : null);
 
-        seatIds.forEach((id, index) => {
+        ids.forEach((id, index) => {
             updateRequest.input(`uid${index}`, sql.Int, id);
         });
 
-        const updatePlaceholders = seatIds.map((_, i) => `@uid${i}`).join(', ');
+        const updatePlaceholders = ids.map((_, i) => `@uid${i}`).join(', ');
 
         const updateResult = await updateRequest.query(`
             UPDATE Seats
@@ -112,6 +128,7 @@ class Seat {
 
     static async book(seatIds) {
         const pool = await getConnection();
+        await ensureSeatHoldColumns(pool);
         const request = pool.request();
 
         seatIds.forEach((id, index) => {
@@ -133,6 +150,7 @@ class Seat {
 
     static async release(seatIds) {
         const pool = await getConnection();
+        await ensureSeatHoldColumns(pool);
         const request = pool.request();
 
         seatIds.forEach((id, index) => {

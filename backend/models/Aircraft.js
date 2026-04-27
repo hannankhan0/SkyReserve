@@ -89,16 +89,16 @@ class Aircraft {
             .input('id', sql.Int, id)
             .query(`
                 UPDATE Aircraft SET
-                    aircraft_type = @aircraft_type,
-                    manufacturer = @manufacturer,
-                    model = @model,
-                    total_seats = @total_seats,
-                    economy_seats = @economy_seats,
-                    business_seats = @business_seats,
-                    first_class_seats = @first_class_seats,
-                    max_range_km = @max_range_km,
-                    cruise_speed_kmh = @cruise_speed_kmh,
-                    fuel_capacity_liters = @fuel_capacity_liters
+                    aircraft_type = COALESCE(@aircraft_type, aircraft_type),
+                    manufacturer = COALESCE(@manufacturer, manufacturer),
+                    model = COALESCE(@model, model),
+                    total_seats = COALESCE(@total_seats, total_seats),
+                    economy_seats = COALESCE(@economy_seats, economy_seats),
+                    business_seats = COALESCE(@business_seats, business_seats),
+                    first_class_seats = COALESCE(@first_class_seats, first_class_seats),
+                    max_range_km = COALESCE(@max_range_km, max_range_km),
+                    cruise_speed_kmh = COALESCE(@cruise_speed_kmh, cruise_speed_kmh),
+                    fuel_capacity_liters = COALESCE(@fuel_capacity_liters, fuel_capacity_liters)
                 WHERE aircraft_id = @id
             `);
 

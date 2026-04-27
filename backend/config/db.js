@@ -1,37 +1,51 @@
 const sql = require('mssql');
 require('dotenv').config();
 
-const config = {
-    server: process.env.DB_SERVER,
-    port: parseInt(process.env.DB_PORT) || 1433,
-    database: process.env.DB_NAME,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    options: {
-        encrypt: true,
-        trustServerCertificate: true,
-        enableArithAbort: true
-    },
-    pool: {
-        max: 10,
-        min: 0,
-        idleTimeoutMillis: 30000
-    }
+const rawServer = process.env.DB_SERVER || 'localhost';
+const [serverName, instanceFromServer] = rawServer.split('\\');
+const instanceName = process.env.DB_INSTANCE || instanceFromServer || undefined;
+
+const options = {
+  encrypt: String(process.env.DB_ENCRYPT || 'false') === 'true',
+  trustServerCertificate: String(process.env.DB_TRUST_SERVER_CERT || process.env.DB_TRUST_SERVER_CERTIFICATE || 'true') === 'true',
+  enableArithAbort: true,
 };
+
+if (instanceName) {
+  options.instanceName = instanceName;
+}
+
+const dbConfig = {
+  server: serverName,
+  database: process.env.DB_DATABASE || process.env.DB_NAME || 'SkyReserve',
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  options,
+  pool: {
+    max: 10,
+    min: 0,
+    idleTimeoutMillis: 30000,
+  },
+};
+
+if (!instanceName && process.env.DB_PORT) {
+  dbConfig.port = parseInt(process.env.DB_PORT, 10);
+}
 
 let pool;
 
 async function getConnection() {
-    if (!pool) {
-        pool = await sql.connect(config);
-        console.log('Database connected successfully to SkyReserve');
-    }
-    return pool;
+  if (!pool) {
+    pool = await new sql.ConnectionPool(dbConfig).connect();
+    console.log('✅ Connected to SQL Server — SkyReserve DB');
+  }
+  return pool;
 }
 
-getConnection().catch(err => {
-    console.error('Database connection failed:', err.message);
-    process.exit(1);
-});
+async function getPool() {
+  return getConnection();
+}
 
-module.exports = { getConnection, sql };
+const poolPromise = getConnection();
+
+module.exports = { sql, getConnection, getPool, poolPromise, dbConfig };
