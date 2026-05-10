@@ -1,0 +1,1256 @@
+
+> skyreserve-frontend@1.0.0 start
+> react-scripts start
+
+(node:14636) [DEP0176] DeprecationWarning: fs.F_OK is deprecated, use fs.constants.F_OK instead
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:14636) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(node:14636) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view skyreserve-frontend in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.133.1:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled [1m[32msuccessfully[39m[22m
+Failed to compile.
+
+Module not found: Error: Can't resolve './components/flights/FlightSearch' in 'D:\Course\Sem 4\DB\project\sky_reserve_final\frontend\src'
+[1m[31mERROR[39m[22m in [1m./src/App.js[39m[22m [1m[32m15:0-61[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve './components/flights/FlightSearch' in 'D:\Course\Sem 4\DB\project\sky_reserve_final\frontend\src'[39m[22m
+
+webpack compiled with [1m[31m1 error[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Failed to compile.
+
+Module not found: Error: Can't resolve './FlightCard' in 'D:\Course\Sem 4\DB\project\sky_reserve_final\frontend\src\components\flights'
+[1m[31mERROR[39m[22m in [1m./src/components/flights/FlightSearch.jsx[39m[22m [1m[32m8:0-38[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve './FlightCard' in 'D:\Course\Sem 4\DB\project\sky_reserve_final\frontend\src\components\flights'[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./src/components/flights/admin/AdminFlightList.jsx[39m[22m [1m[32m7:0-39[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve '../FlightCard' in 'D:\Course\Sem 4\DB\project\sky_reserve_final\frontend\src\components\flights\admin'[39m[22m
+
+webpack compiled with [1m[31m2 errors[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Failed to compile.
+
+Module not found: Error: Can't resolve './components/seats/SeatSelection' in 'D:\Course\Sem 4\DB\project\sky_reserve_final\frontend\src'
+[1m[31mERROR[39m[22m in [1m./src/App.js[39m[22m [1m[32m21:0-61[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve './components/seats/SeatSelection' in 'D:\Course\Sem 4\DB\project\sky_reserve_final\frontend\src'[39m[22m
+
+webpack compiled with [1m[31m1 error[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Failed to compile.
+
+Module not found: Error: Can't resolve './components/bookings/MyBookings' in 'D:\Course\Sem 4\DB\project\sky_reserve_final\frontend\src'
+[1m[31mERROR[39m[22m in [1m./src/App.js[39m[22m [1m[32m25:0-58[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve './components/bookings/MyBookings' in 'D:\Course\Sem 4\DB\project\sky_reserve_final\frontend\src'[39m[22m
+
+webpack compiled with [1m[31m1 error[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Failed to compile.
+
+Module not found: Error: Can't resolve './components/payments/MyPayments' in 'D:\Course\Sem 4\DB\project\sky_reserve_final\frontend\src'
+[1m[31mERROR[39m[22m in [1m./src/App.js[39m[22m [1m[32m28:0-58[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve './components/payments/MyPayments' in 'D:\Course\Sem 4\DB\project\sky_reserve_final\frontend\src'[39m[22m
+
+webpack compiled with [1m[31m1 error[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Failed to compile.
+
+Module not found: Error: Can't resolve './components/auth/LoginForm' in 'D:\Course\Sem 4\DB\project\sky_reserve_final\frontend\src'
+[1m[31mERROR[39m[22m in [1m./src/App.js[39m[22m [1m[32m12:0-52[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve './components/auth/LoginForm' in 'D:\Course\Sem 4\DB\project\sky_reserve_final\frontend\src'[39m[22m
+
+webpack compiled with [1m[31m1 error[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Failed to compile.
+
+Module not found: Error: Can't resolve './components/auth/RegisterForm' in 'D:\Course\Sem 4\DB\project\sky_reserve_final\frontend\src'
+[1m[31mERROR[39m[22m in [1m./src/App.js[39m[22m [1m[32m11:0-58[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve './components/auth/RegisterForm' in 'D:\Course\Sem 4\DB\project\sky_reserve_final\frontend\src'[39m[22m
+
+webpack compiled with [1m[31m1 error[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Failed to compile.
+
+Module not found: Error: Can't resolve './App' in 'D:\Course\Sem 4\DB\project\sky_reserve_final\frontend\src'
+[1m[31mERROR[39m[22m in [1m./src/index.js[39m[22m [1m[32m6:0-24[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve './App' in 'D:\Course\Sem 4\DB\project\sky_reserve_final\frontend\src'[39m[22m
+
+webpack compiled with [1m[31m1 error[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\payments\PaymentPage.jsx
+  Line 26:10:  'error' is assigned a value but never used                                                                no-unused-vars
+  Line 26:17:  'setError' is assigned a value but never used                                                             no-unused-vars
+  Line 43:6:   React Hook useEffect has a missing dependency: 'toast'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\payments\PaymentPage.jsx
+  Line 26:10:  '[1m[31merror[39m[22m[1m' is assigned a value but never used                                                                no-unused-vars
+  Line 26:17:  'setError' is assigned a value but never used                                                             no-unused-vars
+  Line 43:6:   React Hook useEffect has a missing dependency: 'toast'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Failed to compile.
+
+Module not found: Error: Can't resolve './FlightStats' in 'D:\Course\Sem 4\DB\project\sky_reserve_final\frontend\src\components\flights\admin'
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\payments\PaymentPage.jsx
+  Line 26:10:  '[1m[31merror[39m[22m[1m' is assigned a value but never used                                                                no-unused-vars
+  Line 26:17:  'setError' is assigned a value but never used                                                             no-unused-vars
+  Line 43:6:   React Hook useEffect has a missing dependency: 'toast'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+[1m[31mERROR[39m[22m in [1m./src/components/flights/admin/AdminFlightList.jsx[39m[22m [1m[32m9:0-40[39m[22m
+[1mModule [1m[31mnot found[39m[22m[1m: [1m[31mError[39m[22m[1m: Can't resolve './FlightStats' in 'D:\Course\Sem 4\DB\project\sky_reserve_final\frontend\src\components\flights\admin'[39m[22m
+
+webpack compiled with [1m[31m1 error[39m[22m and [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\payments\PaymentPage.jsx
+  Line 26:10:  'error' is assigned a value but never used                                                                no-unused-vars
+  Line 26:17:  'setError' is assigned a value but never used                                                             no-unused-vars
+  Line 43:6:   React Hook useEffect has a missing dependency: 'toast'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\payments\PaymentPage.jsx
+  Line 26:10:  '[1m[31merror[39m[22m[1m' is assigned a value but never used                                                                no-unused-vars
+  Line 26:17:  'setError' is assigned a value but never used                                                             no-unused-vars
+  Line 43:6:   React Hook useEffect has a missing dependency: 'toast'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\payments\PaymentPage.jsx
+  Line 26:10:  'error' is assigned a value but never used                                                                no-unused-vars
+  Line 26:17:  'setError' is assigned a value but never used                                                             no-unused-vars
+  Line 43:6:   React Hook useEffect has a missing dependency: 'toast'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\payments\PaymentPage.jsx
+  Line 26:10:  '[1m[31merror[39m[22m[1m' is assigned a value but never used                                                                no-unused-vars
+  Line 26:17:  'setError' is assigned a value but never used                                                             no-unused-vars
+  Line 43:6:   React Hook useEffect has a missing dependency: 'toast'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\payments\PaymentPage.jsx
+  Line 26:10:  'error' is assigned a value but never used                                                                no-unused-vars
+  Line 26:17:  'setError' is assigned a value but never used                                                             no-unused-vars
+  Line 43:6:   React Hook useEffect has a missing dependency: 'toast'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\payments\PaymentPage.jsx
+  Line 26:10:  '[1m[31merror[39m[22m[1m' is assigned a value but never used                                                                no-unused-vars
+  Line 26:17:  'setError' is assigned a value but never used                                                             no-unused-vars
+  Line 43:6:   React Hook useEffect has a missing dependency: 'toast'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\payments\PaymentPage.jsx
+  Line 26:10:  'error' is assigned a value but never used                                                                no-unused-vars
+  Line 26:17:  'setError' is assigned a value but never used                                                             no-unused-vars
+  Line 43:6:   React Hook useEffect has a missing dependency: 'toast'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\payments\PaymentPage.jsx
+  Line 26:10:  '[1m[31merror[39m[22m[1m' is assigned a value but never used                                                                no-unused-vars
+  Line 26:17:  'setError' is assigned a value but never used                                                             no-unused-vars
+  Line 43:6:   React Hook useEffect has a missing dependency: 'toast'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\schedules\AdminSchedules.jsx
+  Line 44:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\schedules\AdminSchedules.jsx
+  Line 44:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\schedules\AdminSchedules.jsx
+  Line 44:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\schedules\AdminSchedules.jsx
+  Line 44:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\schedules\AdminSchedules.jsx
+  Line 44:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\schedules\AdminSchedules.jsx
+  Line 44:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Failed to compile.
+
+[eslint] 
+src\components\flights\admin\AdminFlightList.jsx
+  Line 184:13:  'setDeleteMsg' is not defined  no-undef
+  Line 185:30:  'setDeleteMsg' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\flights\admin\AdminFlightList.jsx
+  Line 44:40:  React Hook useEffect has a missing dependency: 'fetchFlights'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\schedules\AdminSchedules.jsx
+  Line 44:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+[1m[31mERROR[39m[22m in [1m[eslint] 
+src\components\flights\admin\AdminFlightList.jsx
+  Line 184:13:  'setDeleteMsg' is not defined  no-undef
+  Line 185:30:  'setDeleteMsg' is not defined  no-undef
+
+Search for the keywords to learn more about each [1m[31merror[39m[22m[1m.[39m[22m
+
+webpack compiled with [1m[31m1 error[39m[22m and [1m[33m1 warning[39m[22m
+Compiling...
+Failed to compile.
+
+[eslint] 
+src\components\flights\admin\AdminFlightList.jsx
+  Line 184:13:  'setDeleteMsg' is not defined  no-undef
+  Line 185:30:  'setDeleteMsg' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\flights\admin\AdminFlightList.jsx
+  Line 44:40:  React Hook useEffect has a missing dependency: 'fetchFlights'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\schedules\AdminSchedules.jsx
+  Line 44:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+[1m[31mERROR[39m[22m in [1m[eslint] 
+src\components\flights\admin\AdminFlightList.jsx
+  Line 184:13:  'setDeleteMsg' is not defined  no-undef
+  Line 185:30:  'setDeleteMsg' is not defined  no-undef
+
+Search for the keywords to learn more about each [1m[31merror[39m[22m[1m.[39m[22m
+
+webpack compiled with [1m[31m1 error[39m[22m and [1m[33m1 warning[39m[22m
+Compiling...
+Failed to compile.
+
+[eslint] 
+src\components\flights\admin\AdminFlightList.jsx
+  Line 184:13:  'setDeleteMsg' is not defined  no-undef
+  Line 185:30:  'setDeleteMsg' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\flights\admin\AdminFlightList.jsx
+  Line 44:40:  React Hook useEffect has a missing dependency: 'fetchFlights'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\schedules\AdminSchedules.jsx
+  Line 44:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+[1m[31mERROR[39m[22m in [1m[eslint] 
+src\components\flights\admin\AdminFlightList.jsx
+  Line 184:13:  'setDeleteMsg' is not defined  no-undef
+  Line 185:30:  'setDeleteMsg' is not defined  no-undef
+
+Search for the keywords to learn more about each [1m[31merror[39m[22m[1m.[39m[22m
+
+webpack compiled with [1m[31m1 error[39m[22m and [1m[33m1 warning[39m[22m
+Compiling...
+Failed to compile.
+
+[eslint] 
+src\components\flights\admin\AdminFlightList.jsx
+  Line 184:13:  'setDeleteMsg' is not defined  no-undef
+  Line 185:30:  'setDeleteMsg' is not defined  no-undef
+
+Search for the keywords to learn more about each error.
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\flights\admin\AdminFlightList.jsx
+  Line 44:40:  React Hook useEffect has a missing dependency: 'fetchFlights'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\schedules\AdminSchedules.jsx
+  Line 44:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+[1m[31mERROR[39m[22m in [1m[eslint] 
+src\components\flights\admin\AdminFlightList.jsx
+  Line 184:13:  'setDeleteMsg' is not defined  no-undef
+  Line 185:30:  'setDeleteMsg' is not defined  no-undef
+
+Search for the keywords to learn more about each [1m[31merror[39m[22m[1m.[39m[22m
+
+webpack compiled with [1m[31m1 error[39m[22m and [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\flights\admin\AdminFlightList.jsx
+  Line 44:40:  React Hook useEffect has a missing dependency: 'fetchFlights'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\schedules\AdminSchedules.jsx
+  Line 44:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\flights\admin\AdminFlightList.jsx
+  Line 44:40:  React Hook useEffect has a missing dependency: 'fetchFlights'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\schedules\AdminSchedules.jsx
+  Line 44:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\flights\admin\AdminFlightList.jsx
+  Line 44:40:  React Hook useEffect has a missing dependency: 'fetchFlights'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\schedules\AdminSchedules.jsx
+  Line 44:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\flights\admin\AdminFlightList.jsx
+  Line 44:40:  React Hook useEffect has a missing dependency: 'fetchFlights'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\schedules\AdminSchedules.jsx
+  Line 44:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\flights\admin\AdminFlightList.jsx
+  Line 44:40:  React Hook useEffect has a missing dependency: 'fetchFlights'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\schedules\AdminSchedules.jsx
+  Line 44:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\flights\admin\AdminFlightList.jsx
+  Line 44:40:  React Hook useEffect has a missing dependency: 'fetchFlights'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\schedules\AdminSchedules.jsx
+  Line 44:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\flights\admin\AdminFlightList.jsx
+  Line 44:40:  React Hook useEffect has a missing dependency: 'fetchFlights'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\schedules\AdminSchedules.jsx
+  Line 44:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\flights\admin\AdminFlightList.jsx
+  Line 44:40:  React Hook useEffect has a missing dependency: 'fetchFlights'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\schedules\AdminSchedules.jsx
+  Line 44:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\flights\admin\AdminFlightList.jsx
+  Line 44:40:  React Hook useEffect has a missing dependency: 'fetchFlights'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\schedules\AdminSchedules.jsx
+  Line 44:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\flights\admin\AdminFlightList.jsx
+  Line 44:40:  React Hook useEffect has a missing dependency: 'fetchFlights'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\schedules\AdminSchedules.jsx
+  Line 44:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\flights\admin\AdminFlightList.jsx
+  Line 44:40:  React Hook useEffect has a missing dependency: 'fetchFlights'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\schedules\AdminSchedules.jsx
+  Line 44:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\flights\admin\AdminFlightList.jsx
+  Line 44:40:  React Hook useEffect has a missing dependency: 'fetchFlights'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\schedules\AdminSchedules.jsx
+  Line 44:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\flights\admin\AdminFlightList.jsx
+  Line 44:40:  React Hook useEffect has a missing dependency: 'fetchFlights'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\schedules\AdminSchedules.jsx
+  Line 44:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\bookings\MyBookings.jsx
+  Line 39:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\flights\admin\AdminFlightList.jsx
+  Line 44:40:  React Hook useEffect has a missing dependency: 'fetchFlights'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\schedules\AdminSchedules.jsx
+  Line 44:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\flights\admin\AdminFlightList.jsx
+  Line 44:40:  React Hook useEffect has a missing dependency: 'fetchFlights'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\schedules\AdminSchedules.jsx
+  Line 44:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\flights\admin\AdminFlightList.jsx
+  Line 44:40:  React Hook useEffect has a missing dependency: 'fetchFlights'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\payments\MyPayments.jsx
+  Line 23:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\schedules\AdminSchedules.jsx
+  Line 44:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\flights\admin\AdminFlightList.jsx
+  Line 44:40:  React Hook useEffect has a missing dependency: 'fetchFlights'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\schedules\AdminSchedules.jsx
+  Line 44:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\flights\admin\AdminFlightList.jsx
+  Line 44:40:  React Hook useEffect has a missing dependency: 'fetchFlights'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\schedules\AdminSchedules.jsx
+  Line 44:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\tickets\MyTickets.jsx
+  Line 40:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\flights\admin\AdminFlightList.jsx
+  Line 44:40:  React Hook useEffect has a missing dependency: 'fetchFlights'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\schedules\AdminSchedules.jsx
+  Line 44:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\flights\admin\AdminFlightList.jsx
+  Line 44:40:  React Hook useEffect has a missing dependency: 'fetchFlights'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\schedules\AdminSchedules.jsx
+  Line 44:32:  React Hook useEffect has a missing dependency: 'load'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\flights\admin\AdminFlightList.jsx
+  Line 44:40:  React Hook useEffect has a missing dependency: 'fetchFlights'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\aircraft\AdminAircraft.jsx
+  Line 46:40:  React Hook useEffect has a missing dependency: 'loadAircraft'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+src\components\flights\admin\AdminFlightList.jsx
+  Line 44:40:  React Hook useEffect has a missing dependency: 'fetchFlights'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src\components\flights\admin\AdminFlightList.jsx
+  Line 44:40:  React Hook useEffect has a missing dependency: 'fetchFlights'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+[1m[33mWARNING[39m[22m in [1m[eslint] 
+src\components\flights\admin\AdminFlightList.jsx
+  Line 44:40:  React Hook useEffect has a missing dependency: 'fetchFlights'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+[39m[22m
+
+webpack compiled with [1m[33m1 warning[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
+Compiling...
+Compiled successfully!
+webpack compiled [1m[32msuccessfully[39m[22m
