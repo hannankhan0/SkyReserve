@@ -2,6 +2,38 @@ const { getConnection, sql } = require('../config/db');
 
 
 class Schedule {
+    static async findAircraftConflict({ flight_id, departure_time, arrival_time, exclude_schedule_id = null }) {
+        const pool = await getConnection();
+        const result = await pool.request()
+            .input('flight_id', sql.Int, flight_id)
+            .input('departure_time', sql.DateTime, new Date(departure_time))
+            .input('arrival_time', sql.DateTime, new Date(arrival_time))
+            .input('exclude_schedule_id', sql.Int, exclude_schedule_id)
+            .query(`
+                SELECT TOP 1
+                    existing.schedule_id,
+                    existing.departure_time,
+                    existing.arrival_time,
+                    existing.flight_date,
+                    existing.status,
+                    existing_f.flight_number,
+                    a.aircraft_id,
+                    a.aircraft_type
+                FROM Flights target_f
+                INNER JOIN Aircraft a ON target_f.aircraft_id = a.aircraft_id
+                INNER JOIN Flights existing_f ON existing_f.aircraft_id = a.aircraft_id
+                INNER JOIN Flight_Schedules existing ON existing.flight_id = existing_f.flight_id
+                WHERE target_f.flight_id = @flight_id
+                  AND existing.status != 'cancelled'
+                  AND (@exclude_schedule_id IS NULL OR existing.schedule_id != @exclude_schedule_id)
+                  AND @departure_time < existing.arrival_time
+                  AND @arrival_time > existing.departure_time
+                ORDER BY existing.departure_time
+            `);
+
+        return result.recordset[0] || null;
+    }
+
     static async create(scheduleData) {
         const {
             flight_id,

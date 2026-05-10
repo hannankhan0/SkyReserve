@@ -117,6 +117,27 @@ class Aircraft {
         const pool = await getConnection();
         const result = await pool.request()
             .query(`
+                WITH ScheduleOccupancy AS (
+                    SELECT
+                        fs.schedule_id,
+                        f.aircraft_id,
+                        COUNT(s.seat_id) AS generated_seats,
+                        SUM(CASE WHEN s.is_available = 0 AND s.held_until IS NULL THEN 1 ELSE 0 END) AS booked_seats
+                    FROM Flight_Schedules fs
+                    INNER JOIN Flights f ON fs.flight_id = f.flight_id
+                    LEFT JOIN Seats s ON fs.schedule_id = s.schedule_id
+                    GROUP BY fs.schedule_id, f.aircraft_id
+                ),
+                RevenueByAircraft AS (
+                    SELECT
+                        f.aircraft_id,
+                        SUM(b.total_amount) AS total_revenue
+                    FROM Flights f
+                    INNER JOIN Flight_Schedules fs ON f.flight_id = fs.flight_id
+                    INNER JOIN Bookings b ON fs.schedule_id = b.schedule_id
+                    WHERE b.booking_status IN ('confirmed', 'completed')
+                    GROUP BY f.aircraft_id
+                )
                 SELECT
                     a.aircraft_id,
                     a.aircraft_type,
@@ -126,20 +147,19 @@ class Aircraft {
                     COUNT(DISTINCT fs.schedule_id) AS total_scheduled_flights,
                     ISNULL(
                         AVG(
-                            CAST(
-                                (a.total_seats - fs.available_seats) AS FLOAT
-                            ) * 100.0 / NULLIF(a.total_seats, 0)
+                            CAST(ISNULL(so.booked_seats, 0) AS FLOAT)
+                            * 100.0 / NULLIF(ISNULL(NULLIF(so.generated_seats, 0), a.total_seats), 0)
                         ), 0
                     ) AS avg_occupancy_rate,
-                    ISNULL(SUM(b.total_amount), 0) AS total_revenue
+                    ISNULL(r.total_revenue, 0) AS total_revenue
                 FROM Aircraft a
                 LEFT JOIN Flights f ON a.aircraft_id = f.aircraft_id
                 LEFT JOIN Flight_Schedules fs ON f.flight_id = fs.flight_id
-                LEFT JOIN Bookings b ON fs.schedule_id = b.schedule_id
-                    AND b.booking_status IN ('confirmed', 'completed')
+                LEFT JOIN ScheduleOccupancy so ON fs.schedule_id = so.schedule_id
+                LEFT JOIN RevenueByAircraft r ON a.aircraft_id = r.aircraft_id
                 GROUP BY
                     a.aircraft_id, a.aircraft_type, a.manufacturer,
-                    a.model, a.total_seats
+                    a.model, a.total_seats, r.total_revenue
                 ORDER BY total_revenue DESC
             `);
 

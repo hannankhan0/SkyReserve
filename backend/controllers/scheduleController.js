@@ -31,6 +31,16 @@ exports.createSchedule = async (req, res) => {
             return res.status(404).json({ message: 'Flight not found' });
         }
 
+        const conflict = req.body.status === 'cancelled'
+            ? null
+            : await Schedule.findAircraftConflict({ flight_id, departure_time, arrival_time });
+        if (conflict) {
+            return res.status(409).json({
+                message: `Aircraft ${conflict.aircraft_type} is already scheduled for flight ${conflict.flight_number} during this time window.`,
+                data: conflict
+            });
+        }
+
         const scheduleId = await Schedule.create({ ...req.body });
 
         await generateSeats(scheduleId, flight_id);
@@ -79,6 +89,35 @@ exports.updateSchedule = async (req, res) => {
         const { departure_time, arrival_time } = req.body;
         if (departure_time && arrival_time && new Date(departure_time) >= new Date(arrival_time)) {
             return res.status(400).json({ message: 'departure_time must be before arrival_time' });
+        }
+
+        const existing = await Schedule.findById(req.params.id);
+        if (!existing) {
+            return res.status(404).json({ message: 'Schedule not found' });
+        }
+
+        const nextDepartureTime = departure_time || existing.departure_time;
+        const nextArrivalTime = arrival_time || existing.arrival_time;
+        const nextStatus = status || existing.status;
+
+        if (new Date(nextDepartureTime) >= new Date(nextArrivalTime)) {
+            return res.status(400).json({ message: 'departure_time must be before arrival_time' });
+        }
+
+        if ((departure_time || arrival_time || status) && nextStatus !== 'cancelled') {
+            const conflict = await Schedule.findAircraftConflict({
+                flight_id: existing.flight_id,
+                departure_time: nextDepartureTime,
+                arrival_time: nextArrivalTime,
+                exclude_schedule_id: Number(req.params.id)
+            });
+
+            if (conflict) {
+                return res.status(409).json({
+                    message: `Aircraft ${conflict.aircraft_type} is already scheduled for flight ${conflict.flight_number} during this time window.`,
+                    data: conflict
+                });
+            }
         }
 
         const updated = await Schedule.update(req.params.id, req.body);

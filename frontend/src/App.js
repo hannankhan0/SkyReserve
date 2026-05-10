@@ -106,8 +106,6 @@ const Navbar = () => {
 };
 
 const AppRoutes = () => {
-  const { user, isAdmin } = useApp();
-
   return (
     <>
       <Navbar />
@@ -133,7 +131,7 @@ const AppRoutes = () => {
         <Route path="/admin/schedules" element={<ProtectedRoute adminOnly><AdminSchedules /></ProtectedRoute>} />
         <Route path="/admin/bookings" element={<ProtectedRoute adminOnly><AdminBookings /></ProtectedRoute>} />
         <Route path="/admin/tools" element={<ProtectedRoute adminOnly><AdminTicketCheckIn /></ProtectedRoute>} />
-        <Route path="/" element={user ? (isAdmin ? <Navigate to="/admin" replace /> : <Navigate to="/home" replace />) : <LandingPage />} />
+        <Route path="/" element={<LandingPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </>
