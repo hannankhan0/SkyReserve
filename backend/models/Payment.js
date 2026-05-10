@@ -1,0 +1,189 @@
+const { sql, getPool } = require('../config/db');
+
+const generateTransactionId = () => {
+  return `TXN${Date.now()}${Math.floor(Math.random() * 1000)}`;
+};
+
+const Payment = {
+  async createPayment({ booking_id, payment_method, payment_amount }) {
+    const pool = await getPool();
+    const transaction = new sql.Transaction(pool);
+
+    try {
+      await transaction.begin();
+
+      // ── Look up method_id from Payment_Methods ─────────────────────────
+      const methodRequest = new sql.Request(transaction);
+      methodRequest.input('method_name', sql.VarChar(30), payment_method);
+      const methodResult = await methodRequest.query(`
+        SELECT method_id FROM Payment_Methods WHERE method_name = @method_name
+      `);
+
+      if (methodResult.recordset.length === 0) {
+        throw new Error(
+          `Invalid payment method '${payment_method}'. ` +
+          `Valid options: credit_card, debit_card, bank_transfer, cash`
+        );
+      }
+
+      const method_id = methodResult.recordset[0].method_id;
+      // ───────────────────────────────────────────────────────────────────
+
+      const bookingRequest = new sql.Request(transaction);
+      bookingRequest.input('booking_id', sql.Int, booking_id);
+      const bookingResult = await bookingRequest.query(`
+        SELECT * FROM Bookings WHERE booking_id = @booking_id
+      `);
+
+      if (bookingResult.recordset.length === 0) {
+        throw new Error('Booking not found');
+      }
+
+      const booking = bookingResult.recordset[0];
+
+      if (booking.booking_status === 'cancelled') {
+        throw new Error('Cannot pay for a cancelled booking');
+      }
+      if (booking.booking_status === 'confirmed' || booking.booking_status === 'completed') {
+        throw new Error('Booking is already confirmed');
+      }
+      if (Number(payment_amount) !== Number(booking.total_amount)) {
+        throw new Error(`Payment amount must match booking total (${booking.total_amount})`);
+      }
+
+      const existingPaymentRequest = new sql.Request(transaction);
+      existingPaymentRequest.input('booking_id', sql.Int, booking_id);
+      const existingPaymentResult = await existingPaymentRequest.query(`
+        SELECT TOP 1 *
+        FROM Payments
+        WHERE booking_id = @booking_id
+          AND payment_status IN ('completed', 'pending')
+        ORDER BY payment_date DESC
+      `);
+
+      if (existingPaymentResult.recordset.length > 0) {
+        throw new Error('A payment already exists for this booking');
+      }
+
+      const transactionId = generateTransactionId();
+
+      const paymentRequest = new sql.Request(transaction);
+      paymentRequest.input('booking_id',     sql.Int,          booking_id);
+      paymentRequest.input('method_id',      sql.Int,          method_id);
+      paymentRequest.input('payment_amount', sql.Decimal(10,2), payment_amount);
+      paymentRequest.input('transaction_id', sql.VarChar(50),  transactionId);
+
+      const paymentResult = await paymentRequest.query(`
+        INSERT INTO Payments (
+          booking_id, method_id, payment_amount, payment_status, transaction_id
+        )
+        OUTPUT INSERTED.*
+        VALUES (
+          @booking_id, @method_id, @payment_amount, 'completed', @transaction_id
+        )
+      `);
+
+      const confirmRequest = new sql.Request(transaction);
+      confirmRequest.input('booking_id', sql.Int, booking_id);
+      await confirmRequest.query(`
+        UPDATE Bookings
+        SET booking_status = 'confirmed'
+        WHERE booking_id = @booking_id
+      `);
+
+      await transaction.commit();
+
+      // Return with method_name so API response is human-readable
+      return { ...paymentResult.recordset[0], payment_method };
+    } catch (error) {
+      await transaction.rollback();
+      throw error;
+    }
+  },
+
+  async getMyPayments(user_id) {
+    const pool = await getPool();
+    const request = pool.request();
+    request.input('user_id', sql.Int, user_id);
+
+    const result = await request.query(`
+      SELECT
+        p.payment_id,
+        pm.method_name  AS payment_method,
+        p.payment_amount,
+        p.payment_status,
+        p.transaction_id,
+        p.payment_date,
+        b.booking_reference,
+        f.flight_number
+      FROM Payments p
+      INNER JOIN Payment_Methods pm ON p.method_id    = pm.method_id
+      INNER JOIN Bookings b         ON p.booking_id   = b.booking_id
+      INNER JOIN Flight_Schedules fs ON b.schedule_id = fs.schedule_id
+      INNER JOIN Flights f          ON fs.flight_id   = f.flight_id
+      WHERE b.user_id = @user_id
+      ORDER BY p.payment_date DESC
+    `);
+
+    return result.recordset;
+  },
+
+  async getPaymentById(payment_id) {
+    const pool = await getPool();
+    const request = pool.request();
+    request.input('payment_id', sql.Int, payment_id);
+
+    const result = await request.query(`
+      SELECT
+        p.payment_id,
+        pm.method_name AS payment_method,
+        p.payment_amount,
+        p.payment_status,
+        p.transaction_id,
+        p.payment_date,
+        b.booking_reference,
+        b.booking_status,
+        b.user_id
+      FROM Payments p
+      INNER JOIN Payment_Methods pm ON p.method_id  = pm.method_id
+      INNER JOIN Bookings b         ON p.booking_id = b.booking_id
+      WHERE p.payment_id = @payment_id
+    `);
+
+    return result.recordset[0];
+  },
+
+  async refundPayment(payment_id) {
+    const pool = await getPool();
+    const request = pool.request();
+    request.input('payment_id', sql.Int, payment_id);
+
+    const existingResult = await request.query(`
+      SELECT * FROM Payments WHERE payment_id = @payment_id
+    `);
+
+    if (existingResult.recordset.length === 0) {
+      throw new Error('Payment not found');
+    }
+
+    const payment = existingResult.recordset[0];
+
+    if (payment.payment_status === 'refunded') {
+      throw new Error('Payment already refunded');
+    }
+
+    const updateRequest = pool.request();
+    updateRequest.input('payment_id', sql.Int, payment_id);
+
+    const result = await updateRequest.query(`
+      UPDATE Payments
+      SET payment_status = 'refunded'
+      OUTPUT INSERTED.*
+      WHERE payment_id = @payment_id
+    `);
+
+    return result.recordset[0];
+  }
+};
+
+module.exports = Payment;
